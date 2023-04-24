@@ -4,7 +4,7 @@ function Navbar() {
   return (
     // Navigation bar
     <>
-      <nav className="fixed w-full z-10 bg-gray-700 shadow-xl">
+      <nav className="fixed w-full z-10 bg-gray-700 ">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="text-white">
