@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <div className="bg-gray-800">
       <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
-        <div className="lg:w-1/3 md:w-1/2 bg-gray-600 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
+        <div className="lg:w-1/3 md:w-1/2 shadow-2xl bg-gray-600 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
           <div className="flex flex-col mb-8">
             <div className="flex-grow">
               <h2 className="text-white dark:text-white font-bold mb-2">
@@ -88,7 +88,7 @@ const Contact = () => {
           </div>
           <iframe
             title="Map"
-            className="w-full h-80 rounded-lg overflow-hidden mt-8"
+            className="w-full h-80 rounded-lg overflow-hidden mt-8 shadow-md"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6804.378190645003!2d74.24679319460738!3d31.49148579560293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391902458f9a4737%3A0xc000320dbcba19e2!2sIttefaq%20Town%2C%20Lahore%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1681933464507!5m2!1sen!2s"
             frameborder="0"
             allowfullscreen=""
