@@ -1,5 +1,6 @@
 import React from "react";
 import {GiHamburgerMenu} from 'react-icons/gi'
+import { Link } from "react-router-dom";
 function Navbar() {
   return (
     // Navigation bar
@@ -22,12 +23,12 @@ function Navbar() {
               </button>
             </div>
             <div className="hidden md:flex md:items-center">
-              <a
-                href="#"
+              <Link
+                to="/"
                 className="text-gray-100 hover:text-gray-400 px-3 py-2 rounded-md text-sm font-medium"
               >
                 Home
-              </a>
+              </Link>
               <a
                 href="#"
                 className="text-gray-100 hover:text-gray-400 px-3 py-2 rounded-md text-sm font-medium"
