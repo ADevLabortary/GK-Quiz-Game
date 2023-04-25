@@ -2,7 +2,7 @@ import { FaUserCircle } from "react-icons/fa";
 
 function About() {
   return (
-    <div className="bg-gray-800 py-16">
+    <div id="about" className="bg-gray-800 py-16">
       <div className="container mx-auto flex flex-col items-center">
         <div className="text-4xl font-bold text-white mb-8">
           About Alrian
