@@ -1,7 +1,9 @@
 import React from "react";
 import HeroImage from "../assets/hero-words.png";
 
-function Hero() {
+
+function Hero({navigate}) {
+
   return (
     <>
       <div className="bg-gray-800 flex justify-evenly items-center w-auto py-5">
@@ -13,12 +15,12 @@ function Hero() {
             <p className="text-gray-400 mb-8">
               Challenge yourself with our fun and engaging word quiz game.
             </p>
-            <a
-              href="#"
+            <button
+              onClick={()=> navigate("/test")}
               className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
             >
               Get started
-            </a>
+            </button>
           </div>
           <div>
             <img

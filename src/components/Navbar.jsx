@@ -3,7 +3,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { Link, useLocation } from "react-router-dom";
 function Navbar() {
   location = useLocation;
-  console.log(location);
+
   return (
     // Navigation bar
     <>
@@ -25,7 +25,6 @@ function Navbar() {
               </button>
             </div>
             <div className="hidden md:flex md:items-center">
-              
               <Link
                 to="/"
                 className="text-gray-100 hover:text-gray-400 px-3 py-2 rounded-md text-sm font-medium"
