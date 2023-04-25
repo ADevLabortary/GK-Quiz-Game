@@ -1,7 +1,9 @@
 import React from "react";
 import {GiHamburgerMenu} from 'react-icons/gi'
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 function Navbar() {
+location = useLocation
+ console.log(location)
   return (
     // Navigation bar
     <>
@@ -29,6 +31,8 @@ function Navbar() {
               >
                 Home
               </Link>
+              {location.pathname == "/" &&
+              (<>
               <a
                 href="#"
                 className="text-gray-100 hover:text-gray-400 px-3 py-2 rounded-md text-sm font-medium"
@@ -40,7 +44,8 @@ function Navbar() {
                 className="text-gray-100 hover:text-gray-400 px-3 py-2 rounded-md text-sm font-medium"
               >
                 Contact
-              </a>
+              </a></>)
+}
             </div>
           </div>
         </div>
