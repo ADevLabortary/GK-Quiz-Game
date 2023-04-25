@@ -10,10 +10,10 @@ function Hero({navigate}) {
         <div className="max-w-[75rem] mx-auto px-6 py-10 flex justify-evenly items-center">
           <div className="flex-col mr-[130px]">
             <h1 className="text-4xl font-bold text-white mb-2">
-              Test your word knowledge
+              Test your general knowledge
             </h1>
             <p className="text-gray-400 mb-8">
-              Challenge yourself with our fun and engaging word quiz game.
+              Challenge yourself with our fun and engaging general knowledge quiz game.
             </p>
             <button
               onClick={()=> navigate("/test")}

@@ -12,7 +12,7 @@ function Navbar() {
           <div className="flex items-center justify-between">
             <div className="text-white">
               <a href="#" className="text-xl font-bold">
-                Word Quiz
+                GK Quiz
               </a>
             </div>
             <div className="flex md:hidden">
