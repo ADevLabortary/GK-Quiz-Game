@@ -6,7 +6,7 @@ function TestPage() {
   const [started, setStarted] = useState(false)
   return (
     <div>
-    {started?(  <QuizGame />): <SetupQuiz/>}
+    {started?(  <QuizGame setStarted={setStarted} />): <SetupQuiz setStarted={setStarted} />}
      </div>
   )
 }

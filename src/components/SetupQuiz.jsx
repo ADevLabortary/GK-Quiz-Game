@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { categories } from "../utils/constants";
-function SetupQuiz() {
+function SetupQuiz({setStarted}) {
   const [category, setCategory] = useState("History");
   const [difficulty, setDifficulty] = useState("easy");
 
@@ -33,14 +33,19 @@ function SetupQuiz() {
           </div>
           <div className="text-gray-700 mb-10">
             <p className="mb-2">Select Difficulty</p>
-            <select onChange={(e)=>{setDifficulty(e.target.value)}} className="bg-gray-200 w-full py-2 text-sm px-1 rounded-lg font-semibold">
+            <select
+              onChange={(e) => {
+                setDifficulty(e.target.value);
+              }}
+              className="bg-gray-200 w-full py-2 text-sm px-1 rounded-lg font-semibold"
+            >
               <option value="easy">Easy</option>
               <option value="medium">Medium</option>
               <option value="hard">Hard</option>
             </select>
           </div>
         </div>
-        <button className="bg-yellow-400 font-bold px-3 py-2 rounded-md w-full text-center hover:scale-105 hover:shadow-md hover:bg-yellow-300 transition-transform ease-in-out ">
+        <button onClick={()=>setStarted(true)} className="bg-yellow-400 font-bold px-3 py-2 rounded-md w-full text-center hover:scale-105 hover:shadow-md hover:bg-yellow-300 transition-transform ease-in-out ">
           Start
         </button>
       </div>
