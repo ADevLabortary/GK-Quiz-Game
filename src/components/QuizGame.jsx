@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 function QuizGame() {
   const [selectedOption, setSelectedOption] = useState();
-  const [correctAnswer, setCorrectAnswer] = useState('a')
+  const [correctAnswer, setCorrectAnswer] = useState('a');
   let score = 0
   const validityCheck = (opt, ans) =>{
       if(opt===ans){
