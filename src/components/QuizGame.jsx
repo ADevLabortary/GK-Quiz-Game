@@ -2,7 +2,14 @@ import React, { useState } from "react";
 
 function QuizGame() {
   const [selectedOption, setSelectedOption] = useState();
-
+  const [correctAnswer, setCorrectAnswer] = useState('a')
+  let score = 0
+  const validityCheck = (opt, ans) =>{
+      if(opt===ans){
+       score += 1
+        console.log(score)
+      }
+  }
   return (
     <div className="flex items-center justify-center font-sans h-screen bg-slate-200">
       <div className="bg-white py-6 px-8 flex-col flex h-fit w-[800px] rounded-lg shadow-lg">
@@ -31,7 +38,15 @@ function QuizGame() {
           </button>
         </div>
         <div className="flex w-full justify-center">
-          <button className="bg-yellow-500 px-16 hover:bg-yellow-400 py-2 rounded-lg font-bold text-lg text-black ">
+          <button
+          onClick={validityCheck(selectedOption, correctAnswer)}
+            disabled={selectedOption ? false : true}
+            className={` px-16 ${
+              selectedOption
+                ? " hover:bg-yellow-400 bg-yellow-500 "
+                : "bg-yellow-600"
+            } py-2 rounded-lg font-bold text-lg text-black `}
+          >
             Next{" "}
           </button>
         </div>
