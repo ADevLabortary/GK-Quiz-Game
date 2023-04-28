@@ -1,10 +1,32 @@
 import React, { useState } from "react";
 import { categories } from "../utils/constants";
-function SetupQuiz({setStarted}) {
+function SetupQuiz({ setStarted, setData }) {
   const [category, setCategory] = useState("History");
   const [difficulty, setDifficulty] = useState("easy");
 
-  console.log(difficulty);
+  const requestBody = {
+    "category": category,
+  };
+ 
+
+  const getTheQuestions = async () => {
+    try {
+      const response = await fetch("http://localhost:3000/test", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(requestBody),
+      });
+      const data = await response.json()
+      setData(data)
+      setStarted(true)
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  // console.log(difficulty);
   return (
     <div className="flex items-center justify-center font-sans h-screen bg-slate-200">
       <div className="bg-white shadow-xl h-[500px] rounded-lg w-[430px] p-6">
@@ -45,7 +67,10 @@ function SetupQuiz({setStarted}) {
             </select>
           </div>
         </div>
-        <button onClick={()=>setStarted(true)} className="bg-yellow-400 font-bold px-3 py-2 rounded-md w-full text-center hover:scale-105 hover:shadow-md hover:bg-yellow-300 transition-transform ease-in-out ">
+        <button
+          onClick={getTheQuestions}
+          className="bg-yellow-400 font-bold px-3 py-2 rounded-md w-full text-center hover:scale-105 hover:shadow-md hover:bg-yellow-300 transition-transform ease-in-out "
+        >
           Start
         </button>
       </div>

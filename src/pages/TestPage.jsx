@@ -4,9 +4,11 @@ import SetupQuiz from '../components/SetupQuiz'
 
 function TestPage() {
   const [started, setStarted] = useState(false)
+  const [data, setData] = useState()
+  console.log(data)
   return (
     <div>
-    {started?(  <QuizGame setStarted={setStarted} />): <SetupQuiz setStarted={setStarted} />}
+    {started?(  <QuizGame data={data} setStarted={setStarted} />): <SetupQuiz setData={setData} setStarted={setStarted} />}
      </div>
   )
 }
