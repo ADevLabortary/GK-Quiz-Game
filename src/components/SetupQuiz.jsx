@@ -5,9 +5,8 @@ function SetupQuiz({ setStarted, setData }) {
   const [difficulty, setDifficulty] = useState("easy");
 
   const requestBody = {
-    "category": category,
+    category: category,
   };
- 
 
   const getTheQuestions = async () => {
     try {
@@ -18,9 +17,11 @@ function SetupQuiz({ setStarted, setData }) {
         },
         body: JSON.stringify(requestBody),
       });
-      const data = await response.json()
-      setData(data)
-      setStarted(true)
+      const data = await response.json();
+      // These states are made in TestPage.jsx (the parent components of this componenet) the functions were passed as a prop to this in order to send the data to the TestPage component and pass it down to the QuizGame.jsx component as a prop
+      
+      setData(data);
+      setStarted(true);
     } catch (error) {
       console.log(error);
     }
