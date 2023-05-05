@@ -1,17 +1,15 @@
 import React from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 function Navbar() {
-  location = useLocation;
-
   return (
     // Navigation bar
     <>
-      <nav className="fixed w-full z-10 bg-gray-700 ">
+      <nav className="fixed w-full z-10 bg-yellow-300 ">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="text-white">
-              <a href="#" className="text-xl font-bold">
+            <div className="text-black">
+              <a href="/" className="text-3xl font-bold">
                 GK Quiz
               </a>
             </div>
@@ -27,26 +25,22 @@ function Navbar() {
             <div className="hidden md:flex md:items-center">
               <Link
                 to="/"
-                className="text-gray-100 hover:text-gray-400 px-3 py-2 rounded-md text-sm font-medium"
+                className=" hover:bg-blue-400 mx-2 bg-blue-500 text-white px-3 py-2 rounded-md text-sm font-medium"
               >
                 Home
               </Link>
-              {location.pathname == "/" && (
-                <>
-                  <a
-                    href="#about"
-                    className="text-gray-100 hover:text-gray-400 px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    About
-                  </a>
-                  <a
-                    href="#contact"
-                    className="text-gray-100 hover:text-gray-400 px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Contact
-                  </a>
-                </>
-              )}
+              <Link
+                to="/how-to-play"
+                className=" hover:bg-blue-400 mx-2 bg-blue-500 text-white px-3 py-2 rounded-md text-sm font-medium"
+              >
+                Tutorial
+              </Link>
+              <Link
+                to="/contact"
+                className=" hover:bg-blue-400 mx-2 bg-blue-500 text-white px-3 py-2 rounded-md text-sm font-medium"
+              >
+                Contact
+              </Link>
             </div>
           </div>
         </div>

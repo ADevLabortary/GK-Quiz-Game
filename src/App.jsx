@@ -1,6 +1,9 @@
-import Home from "./pages/Home";
 import TestPage from "./pages/TestPage";
 import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import HowToPlaySection from "./components/HowToPlay";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 import { Route, Routes, useNavigate } from "react-router-dom";
 export default function App() {
   const navigate = useNavigate();
@@ -9,9 +12,14 @@ export default function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home navigate={navigate} />} />
+        <Route path="/" element={<Hero navigate={navigate} />} />
+
+        <Route path="/how-to-play" element={<HowToPlaySection />} />
+        <Route path="/contact" element={<Contact />} />
+
         <Route path="/test" element={<TestPage />} />
       </Routes>
+      <Footer />
     </>
   );
 }
